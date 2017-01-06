@@ -1,0 +1,17 @@
+<template name="messages">
+  <div class="message-history">
+    {{#each messages}}
+      {{> message text=text}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="message">
+    <div class="message">
+        <a href="" class="message_profile-pic"></a>
+        <a href="" class="message_username">Renan</a>
+        <span class="message_timestamp">11:23 am</span>
+        <span class="message_star">Hello</span>
+        <span class="message_content">{{text}}</span>
+    </div>
+</template>
