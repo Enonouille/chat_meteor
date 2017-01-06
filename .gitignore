@@ -1,2 +1,4 @@
 node_modules/
 client/stylesheets/style.css
+.DS_Store
+client/.DS_Store
