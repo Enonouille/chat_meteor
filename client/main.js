@@ -1,23 +1,26 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
-import './views/main.html';
-import './images/logo.svg';
+import './room.html';
 
-Template.hello.onCreated(function helloOnCreated() {
-  // counter starts at 0
-  this.counter = new ReactiveVar(0);
+Template.messages.helpers({
+  messages: [
+    {text: "All these messages"},
+    {text: "Uses the same template"},
+    {text: "But have a different data context"},
+    {text: "It's why these messages are all different!"},
+    {text: "Hello man"}
+  ]
 });
 
-Template.hello.helpers({
-  counter() {
-    return Template.instance().counter.get();
-  },
-});
+Template.footer.events({
+  'keypress input': function(e) {
+    if (event.charCode == 13) {
+      const valueMessage = $('.input-box_text').val();
 
-Template.hello.events({
-  'click button'(event, instance) {
-    // increment the counter when button is clicked
-    instance.counter.set(instance.counter.get() + 1);
-  },
+      e.preventDefault();
+      $('.message-history').append(`<div class="message"><a href="" class="message_profile-pic"></a><a href="" class="message_username">Renan</a><span class="message_timestamp">11:23 am</span><span class="message_star">Hello</span><span class="message_content">${valueMessage}</span></div>`);
+      $('.input-box_text').val('');
+    } 
+  }
 });
