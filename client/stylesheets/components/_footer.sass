@@ -1,0 +1,85 @@
+.footer
+  position: absolute
+  bottom: 0
+  background-color: #f4f4f4
+  height: 100px
+  float: left
+  clear: both
+  width: 100%
+  display: flex
+  z-index: 2;
+  .footer_image_user
+    width: 55px
+    height: auto
+    margin-top: 24px
+    margin-left: 24px
+    float: left
+  .user-menu_username, .connection_status
+    display: none
+  .input-box
+    float: left
+    width: 70%
+    margin-left: 10px
+    margin-top: 27px
+    input
+      width: 100%
+      height: 50px
+      border-radius: 10px
+      border: 0px
+  @include medium
+    position: absolute
+    bottom: 0
+    background-color: #f4f4f4
+    height: 100px
+    float: left
+    clear: both
+    width: 100%
+    display: flex
+    .footer_image_user
+      width: 55px
+      height: auto
+      margin-top: 24px
+      margin-left: 24px
+      float: left
+    .user-menu_username, .connection_status
+      display: none
+    .input-box
+      float: left
+      width: 70%
+      margin-left: 30px
+      margin-top: 27px
+      input
+        width: 100%
+        height: 50px
+        border-radius: 10px
+        border: 0px
+      input::focus
+        outline: none
+        border-color: #9ecaed
+        box-shadow: 0 0 10px #9ecaed
+      
+.footer__box_btn
+  padding: 15px 15px 15px 15px;
+  margin-top: 28px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: 'Raleway', sans-serif
+  text-transform: uppercase
+  border-radius: 10px
+  font-size: 12px
+  background: linear-gradient(to right, #e05250 0%, #f1bc8d 100%)
+  color: #fff
+  border: 0px
+  @include medium
+    padding: 15px 50px 15px 50px
+    margin-top: 28px
+    margin-left: 20px
+    font-family: 'Raleway', sans-serif
+    text-transform: uppercase
+    border-radius: 10px
+    font-size: 16px
+    background: linear-gradient(to right, #e05250 0%, #f1bc8d 100%)
+    color: #fff
+    border: 0px
+    
+      

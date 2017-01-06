@@ -24,3 +24,5 @@ Template.footer.events({
     } 
   }
 });
+
+
