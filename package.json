@@ -2,10 +2,20 @@
   "name": "project",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "meteor run",
+    "build-css": "node-sass --include-path sass ./client/stylesheets/style.sass ./client/stylesheets/style.css --output-style compressed && postcss --use autoprefixer ./client/stylesheets/style.css -d ./client/stylesheets/",
+    "watch-css": "nodemon -e sass -x \"npm run build-css\"",
+    "dev": "concurrently --kill-others \"npm run start\" \"npm run watch-css\""
   },
   "dependencies": {
-    "meteor-node-stubs": "~0.2.0",
-    "babel-runtime": "6.18.0"
+    "babel-runtime": "^6.18.0",
+    "meteor-node-stubs": "~0.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.6.1",
+    "concurrently": "^3.1.0",
+    "node-sass": "^4.1.1",
+    "nodemon": "^1.11.0",
+    "postcss-cli": "^2.6.0"
   }
 }
