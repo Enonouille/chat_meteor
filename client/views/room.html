@@ -6,13 +6,16 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 <body>
-  {{> header}}
-  {{> chat_room}}
-  <div class="main">
-    <!-- {{> listings}} -->
-    {{> messages}}
+  <div class="container-chat">
+    {{> header}}
+    <div class="main">
+      {{> chat_room}}
+      <!-- {{> listings}} -->
+      {{> messages}}
+    </div>
+    {{> footer}}
+    
+    <!-- {{> signIn}} -->
   </div>
-  {{> footer}}
-  
-  <script src="js/chatroomAside.js"></script>
+
 </body>
