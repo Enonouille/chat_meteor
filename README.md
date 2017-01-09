@@ -4,6 +4,6 @@ NPM INSTALL
 
 and run 
 
-NPM RUN DEV to discover our beautiful PROJECT who doesn't work very well... For the moment ;)
+NPM RUN DEV to discover our beautiful CHAT METEOR
 
-To send a Message click on Button 'Send'.
+To send a Message tape 'Enter'.
